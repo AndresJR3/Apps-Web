@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Londres</title>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5c5ed042;
+            font-size: 18px; 
+            line-height: 1.6;
+            text-align:justify; 
+        }
+
+        header {
+            background-color: #9b612e;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        header h1 {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #intro {
+            text-align: center;
+            padding: 24px;
+            background-color: #F4F4F4;
+        }
+
+        #intro h2 {
+            color: #555;
+        }
+
+        #lugares {
+            display:flow-root;
+            flex-wrap: wrap;
+            justify-content: center; /* Alinear el contenido en el centro */
+            align-items: center; /* Centrar verticalmente */
+            padding: 10px; 
+            background-color: #fff;
+        }
+
+        .lugar {
+            width: calc(50% - 1rem);
+            margin: 60px;
+            padding: 35px;
+            background-color: #F0F0F0;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .lugar img {
+          text-align: center;
+          flex-direction:column;
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+
+        .subtitulo {
+          text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 45px;
+            border-radius: 8px;
+            margin-top: -30px; /* Levantar el subtítulo sobre la imagen */
+
+        }
+        #video{
+          padding: 20px;
+          margin-top: -20px;
+          text-align: center;
+          font-size: 15px;
+        }
+        .contenido-video {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .video-item {
+            width: calc(33.33% - 2rem);
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-item video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Efecto de imagen en lugar */
+        .lugar img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .lugar:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Efecto de subtítulo */
+        .subtitulo {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 45px;
+            border-radius: 8px;
+            margin-top: -30px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background-color: #555;
+            color: #fff;
+        }
+        #audio{
+          padding: 30px;
+          margin: 50px;
+          text-align: center;
+        }
+      .texto-audio {
+        width: 80%; 
+        margin: 0 auto; 
+        text-align: justify; 
+      }
+      .texto-audio p {
+        font-size: 18px; 
+        line-height: 1.6; 
+      }
+        #formulario {
+            padding: 2rem;
+            background-color: #9b9595;
+            text-align: center;
+        }
+
+        #formulario h3 {
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label,
+        form select,
+        form input {
+            margin: 0.5rem 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        form input[type="submit"] {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Explora Londres</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#lugares">Lugares</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="intro">
+    <h2> <strong>Bienvenido a Londres</strong></h2>
+    <p>Embárcate en un viaje a través de la rica historia y cultura de la capital inglesa.</p>
+  </section>
+  
+  <section id="lugares">
+    <h2 class="subtitulo">Lugares de Encanto</h2>
+    <div class="lugar">
+        <a href="https://www.visitlondon.com/es/">
+            <img src="londres.jpeg" alt="LONDRES">
+        </a>
+        <h3>Tierra Británica</h3>
+        <p>Explora la majestuosa residencia de la monarquía británica.</p>
+    </div>
+    <div class="lugar">
+        <a href="https://www.travelguide.de/es/big-ben-y-casas-del-parlamento/">
+            <img src="bigben.jpg" alt="Big Ben">
+        </a>
+        <h3>Big Ben</h3>
+        <p>Contempla el icónico símbolo del horizonte londinense.</p>
+    </div>
+    <div class="lugar">
+        <a href="https://loving-london.com/es/buckingham-palace-londres/">
+            <img src="buckingham.jpg" alt="Palacio de Buckingham">
+        </a>
+        <h3>Palacio de Buckingham</h3>
+        <p>Sede de históricos eventos, incluida la boda real del Príncipe Carlos y Lady Di.</p>
+    </div>
+    <div class="lugar">
+        <a href="https://londresando.com/st-pauls-cathedral-catedral-de-san-pablo/">
+            <img src="catedral.jpeg" alt="Catedral de San Pablo de Londres">
+        </a>
+        <h3>Catedral de San Pablo</h3>
+        <p>Maravíllate con la grandiosa Catedral de San Pablo, escenario de momentos memorables.</p>
+    </div>
+</section>
+
+<section id="video">
+  <h2 class="subtitulo">Explora con Videos</h2>
+  <div class="contenido-video">
+      <div class="video-item">
+          <video controls width="100%">
+              <source src="VideoEnglandView.mp4" type="video/mp4">
+          </video>
+          <p>Descubra el turismo de Londres, la capital de Inglaterra/Reino Unido. Londres, principal destino turístico europeo 
+            con el Big Ben, el Puente de la Torre, el Palacio de Buckingham, el Palacio de Westminister, Trafalgar Square, el río Támesis, etc.</p>
+      </div>
+      <div class="video-item">
+          <video controls width="100%">
+              <source src="QueVer.mp4" type="video/mp4">
+          </video>
+          <p>Londres es la mayor ciudad y área urbana de Gran Bretaña y de toda la Unión Europea. Se encuentra situada a las orillas del río Támesis y, destaca por ser uno de los 
+          centros neurálgicos en el ámbito de las artes, el comercio, la educación, el entretenimiento o la moda.</p>
+      </div>
+      <div class="video-item">
+          <video controls width="100%">
+              <source src="Carlos.mp4" type="video/mp4">
+          </video>
+          <p>Ocho meses después de subir al trono tras la muerte de Isabel II, su hijo Carlos III fue solemnemente coronado el sábado junto a su esposa Camila en una fastuosa 
+          ceremonia, que el Reino Unido no vivía desde hace 70 años. </p>
+      </div>
+  </div>
+</section>
+
+<section id="audio">
+  <h2 class="subtitulo">Escucha un Audio</h2>
+  <div class="contenido-audio">
+    <audio controls>
+      <source src="mp3.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <div class="texto-audio"> 
+      <p>Esta conversación en inglés va sobre Londres, la capital de Inglaterra, y junto con Nueva York y Tokio, uno de los tres principales centros financieros del mundo...</p>
+      <p>Empezamos la charla con una breve historia de Londres, y a continuación algunos datos y estadísticas sobre la ciudad.</p>
+      <p>Luego hablamos de la rica cultura de Londres. Allí se hablan más de 300 idiomas y el 40% de sus habitantes han nacido fuera, por lo que muchos la consideran (de manera bastante acertada) la capital multicultural del mundo.</p>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <div id="formulario">
+      <h3>Reserva tu Experiencia en Londres</h3>
+      <form action="procesar.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="lugar">Lugar para Reservar:</label>
+        <select id="lugar" name="lugar" required>
+          <option value="" disabled selected>Selecciona un Lugar</option>
+          <option value="Buckingham">Palacio de Buckingham</option>
+          <option value="BigBen">Big Ben</option>
+          <option value="Catedral de San Pablo">Catedral de San Pablo</option>
+        </select>
+
+        <br>
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <br>
+
+        <input type="submit" value="Reservar">      
+      </form>
+    </div>
+  </footer>
+  
+</body>
+</html>
