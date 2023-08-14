@@ -21,6 +21,7 @@
             text-align: center;
             padding: 50px;
         }
+
         header h1 {
             font-family: 'Cinzel Decorative', cursive;
             font-size: 2.5rem;
@@ -77,15 +78,18 @@
           max-width: 100%;
           height: auto;
           border-radius: 8px;
-        }
+        }        
 
         .subtitulo {
-          text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); 
+            text-align: center;
+            
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 45px;
             border-radius: 8px;
-            margin-top: -30px; /* Levantar el subtítulo sobre la imagen */
-
+            margin-top: -30px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
         }
         #video{
           padding: 20px;
@@ -144,6 +148,13 @@
             position: relative;
             z-index: 1;
         }
+
+        .subtitulo h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
         footer {
             text-align: center;
             padding: 1.5rem 0;
@@ -202,6 +213,38 @@
         form input[type="submit"]:hover {
             background-color: #777;
         }
+
+        #referencias {
+         background-color: #2b2b2b;
+        padding: 40px;
+        color: #000000;
+        text-align: center;
+        }
+
+      #referencias h2 {
+        font-size: 2rem;
+       margin-bottom: 20px;
+      }
+
+      #referencias ul {
+       list-style: none;
+        padding: 0;
+       margin: 0;
+       text-align: left;
+      }
+
+      #referencias ul li {
+        margin-bottom: 10px;
+      }
+
+      #referencias ul li a {
+       color: #3498db;
+       border-color: #2b2b2b;
+      }
+
+      #referencias p {
+        margin-top: 20px;
+      } 
     </style>
 </head>
 <body>
@@ -209,15 +252,16 @@
     <h1>Explora Londres</h1>
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
         <li><a href="#lugares">Lugares</a></li>
       </ul>
     </nav>
   </header>
   
   <section id="intro">
-    <h2> <strong>Bienvenido a Londres</strong></h2>
-    <p>Embárcate en un viaje a través de la rica historia y cultura de la capital inglesa.</p>
+        <div class="subtitulo">
+            <h2><strong>Bienvenido a Londres</strong></h2>
+            <p>Embárcate en un viaje a través de la rica historia y cultura de la capital inglesa.</p>
+        </div>
   </section>
   
   <section id="lugares">
@@ -319,6 +363,19 @@
       </form>
     </div>
   </footer>
-  
+
+  <section id="referencias" style="background-color: #e2e2e2; padding: 20px;">
+    <h2>Referencias</h2>
+    <ul>
+      <li><a href="https://www.visitlondon.com/es/">Tierra Británica - Visit London</a></li>
+      <li><a href="https://www.travelguide.de/es/big-ben-y-casas-del-parlamento/">Big Ben y Casas del Parlamento - Travel Guide</a></li>
+      <li><a href="https://loving-london.com/es/buckingham-palace-londres/">Buckingham Palace Londres - Loving London</a></li>
+      <li><a href="https://londresando.com/st-pauls-cathedral-catedral-de-san-pablo/">St. Paul's Cathedral: Catedral de San Pablo - LondresAndo</a></li>
+      <li><a href="https://www.youtube.com/">Explora con Videos</a></li>
+      <li><a href="https://ingles.fm/conversacion-en-ingles-2-9-londres-london">Escucha un Audio</a></li>
+    </ul>
+    <p>Me es de agrado apoyar a los creadores de contenido para utilizar su infomración respectivamente.</p>
+    <p>AndrésJ.Ago2023</p>
+  </section>
 </body>
 </html>
